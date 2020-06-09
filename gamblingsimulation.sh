@@ -1,5 +1,4 @@
 #!/bin/bash -x
-
 echo "Gambling Simulator"
 
 INITIAL_STAKE=100
