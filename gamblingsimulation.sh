@@ -16,6 +16,7 @@ daysLoss=0
 
 declare -A fullDay
 declare -A maxMinDay
+
 function betResult()
 {       dayStake=$INITIAL_STAKE
         while [ $dayStake -lt $maxWin ] && [ $dayStake -gt $maxLoss ]
