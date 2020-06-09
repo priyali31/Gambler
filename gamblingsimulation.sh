@@ -50,9 +50,9 @@ echo "Total Won/loss : $totalWinOrLoss"
 echo "Winned days $daysWin by $(($daysWin*$stakePercentAmount))" 
 echo "Lossed days $daysLoss by  $(($daysLoss*$stakePercentAmount))"
 echo "${!maxMinDay[@]} : ${maxMinDay[@]}"
+
 luckyDay=$( printf "%s\n" ${maxMinDay[@]} | sort -nr | head -1 )
 unluckyDay=$( printf "%s\n" ${maxMinDay[@]} | sort -nr | tail -1 )
-
 
 	for data in "${!maxMinDay[@]}"
      	do
