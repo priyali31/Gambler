@@ -9,6 +9,7 @@ LOSS=0
 BET=1
 IS_VALID=true
 LAST_LOSSAMOUNT=0
+
 #variable
 stakePercentAmount=$(( 50*$INITIAL_STAKE/100 ))
 maxWin=$(( $stakePercentAmount+$INITIAL_STAKE ))
