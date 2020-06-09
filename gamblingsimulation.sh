@@ -64,7 +64,7 @@ function monthBetting()
    luckyDay=$( printf "%s\n" ${monthChart[@]} | sort -nr | head -1 )
    unluckyDay=$( printf "%s\n" ${monthChart[@]} | sort -nr | tail -1 )
 
-function luckyUnlucky
+function luckyUnlucky()
 {
    for data in "${!monthChart[@]}"
    do
