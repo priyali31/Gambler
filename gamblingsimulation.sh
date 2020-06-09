@@ -1,6 +1,7 @@
 #!/bin/bash 
 echo "gambling simulator"
 
+#constant
 INITIAL_STAKE=100
 NUM_OFDAYS=30
 WIN=1
@@ -8,7 +9,7 @@ LOSS=0
 BET=1
 IS_VALID=true
 LAST_LOSSAMOUNT=0
-
+#variable
 stakePercentAmount=$(( 50*$INITIAL_STAKE/100 ))
 maxWin=$(( $stakePercentAmount+$INITIAL_STAKE ))
 maxLoss=$(( $INITIAL_STAKE-$stakePercentAmount ))
@@ -72,7 +73,7 @@ function monthBetting(){
       fi
    done
 }
-
+#main
 while [ $IS_VALID ]
 do
    monthBetting
