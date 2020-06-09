@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 echo "gambling simulator"
 
 #constant
@@ -9,6 +9,7 @@ LOSS=0
 BET=1
 IS_VALID=true
 LAST_LOSSAMOUNT=0
+
 #variable
 stakePercentAmount=$(( 50*$INITIAL_STAKE/100 ))
 maxWin=$(( $stakePercentAmount+$INITIAL_STAKE ))
@@ -35,8 +36,8 @@ function dailyBetting()
    done
 }
 
-function monthBetting(){
-
+function monthBetting()
+{
    for (( day=1; day<=$NUM_OFDAYS; day++ ))
    do
    dailyBetting
@@ -53,15 +54,18 @@ function monthBetting(){
          ((daysWin++))
       fi
    done
- 
+
    echo "Total Won/loss : $totalWinOrLoss"
    echo "Winned days $daysWin by $(($daysWin*$stakePercentAmount))" 
    echo "Lossed days $daysLoss by  $(($daysLoss*$stakePercentAmount))"
    echo "${!monthChart[@]} : ${monthChart[@]}"
+}
 
    luckyDay=$( printf "%s\n" ${monthChart[@]} | sort -nr | head -1 )
    unluckyDay=$( printf "%s\n" ${monthChart[@]} | sort -nr | tail -1 )
 
+function luckyUnlucky
+{
    for data in "${!monthChart[@]}"
    do
       if [[ ${monthChart[$data]} -eq $luckyDay ]]
@@ -73,6 +77,7 @@ function monthBetting(){
       fi
    done
 }
+
 #main
 while [ $IS_VALID ]
 do
