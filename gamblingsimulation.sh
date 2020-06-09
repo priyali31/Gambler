@@ -1,5 +1,4 @@
 #!/bin/bash -x
-
 INITIAL_STAKE=100
 BET=1
 DAY=1
